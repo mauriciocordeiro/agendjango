@@ -4,8 +4,8 @@ from . import views
 
 router = routers.DefaultRouter()
 router.register(r'pessoa', views.PessoaViewSet)
-router.register(r'endereco', views.EnderecoViewSet)
-router.register(r'telefone', views.TelefoneViewSet)
+#router.register(r'endereco', views.EnderecoViewSet)
+#router.register(r'telefone', views.TelefoneViewSet)
 
 # Wire up our API using automatic URL routing.
 # Additionally, we include login URLs for the browsable API.
