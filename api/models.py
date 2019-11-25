@@ -20,11 +20,11 @@ class Endereco(models.Model):
     id_pessoa = models.ForeignKey('Pessoa', on_delete=models.CASCADE)
     logradouro = models.CharField(max_length=128, blank=False, null=False)
     numero = models.CharField(max_length=8)
-    complemento = models.CharField(max_length=64)
+    complemento = models.CharField(max_length=64, blank=True, null=True)
     bairro = models.CharField(max_length=32)
-    cep = models.CharField(max_length=9)
-    cidade = models.CharField(max_length=32)
-    uf = models.CharField(max_length=2)
+    cep = models.CharField(max_length=9, blank=True, null=True)
+    cidade = models.CharField(max_length=32, blank=True, null=True)
+    uf = models.CharField(max_length=2, blank=True, null=True)
     tipo = models.IntegerField(choices=TIPOS_CHOICES)
 
     class Meta:
