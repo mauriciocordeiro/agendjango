@@ -3,7 +3,6 @@ from django.db import models
 # Create your models here.
 
 class Pessoa(models.Model):
-    id = models.IntegerField(primary_key=True, unique=True, null=False)
     nome = models.CharField(max_length=32, blank=False, null=False)
     sobrenome = models.CharField(max_length=32, blank=False, null=False)
     nascimento = models.DateField()
@@ -16,7 +15,6 @@ class Endereco(models.Model):
         (2, 'Residencial')
     ]
 
-    id = models.IntegerField(primary_key=True, unique=True, null=False)
     id_pessoa = models.ForeignKey('Pessoa', related_name='enderecos', on_delete=models.CASCADE)
     logradouro = models.CharField(max_length=128, blank=False, null=False)
     numero = models.CharField(max_length=8)
@@ -38,7 +36,6 @@ class Telefone(models.Model):
         (4, 'Residencial')
     ]
 
-    id = models.IntegerField(primary_key=True, unique=True, null=False)
     id_pessoa = models.ForeignKey('Pessoa', related_name='telefones', on_delete=models.CASCADE)
     numero = models.CharField(max_length=32, blank=False, null=False)
     tipo = models.IntegerField(choices=TIPOS_CHOICES)
