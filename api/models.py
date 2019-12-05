@@ -17,7 +17,7 @@ class Endereco(models.Model):
     ]
 
     id = models.IntegerField(primary_key=True, unique=True, null=False)
-    id_pessoa = models.ForeignKey('Pessoa', on_delete=models.CASCADE)
+    id_pessoa = models.ForeignKey('Pessoa', related_name='enderecos', on_delete=models.CASCADE)
     logradouro = models.CharField(max_length=128, blank=False, null=False)
     numero = models.CharField(max_length=8)
     complemento = models.CharField(max_length=64, blank=True, null=True)
@@ -33,13 +33,13 @@ class Endereco(models.Model):
 class Telefone(models.Model):
     TIPOS_CHOICES = [
         (1, 'Celular'),
-        (2,'Comercial'),
+        (2, 'Comercial'),
         (3, 'Fax'),
         (4, 'Residencial')
     ]
 
     id = models.IntegerField(primary_key=True, unique=True, null=False)
-    id_pessoa = models.ForeignKey('Pessoa', on_delete=models.CASCADE)
+    id_pessoa = models.ForeignKey('Pessoa', related_name='telefones', on_delete=models.CASCADE)
     numero = models.CharField(max_length=32, blank=False, null=False)
     tipo = models.IntegerField(choices=TIPOS_CHOICES)
     
