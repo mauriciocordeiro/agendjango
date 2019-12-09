@@ -20,7 +20,7 @@ class Endereco(models.Model):
     numero = models.CharField(max_length=8)
     complemento = models.CharField(max_length=64, blank=True, null=True)
     bairro = models.CharField(max_length=32)
-    cep = models.CharField(max_length=9, blank=True, null=True)
+    cep = models.CharField(max_length=10, blank=True, null=True)
     cidade = models.CharField(max_length=32, blank=True, null=True)
     uf = models.CharField(max_length=2, blank=True, null=True)
     tipo = models.IntegerField(choices=TIPOS_CHOICES)
