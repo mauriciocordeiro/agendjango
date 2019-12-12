@@ -2,7 +2,7 @@
  
  RESTful API para agenda de contatos.
  
- Acesse em [agendjango.herokuapp.com](agendjango.herokuapp.com)
+ Acesse em [agendjango.herokuapp.com](https://agendjango.herokuapp.com)
  
  ## Dependências
  
