@@ -1,4 +1,8 @@
 # agendjango
+
+![](https://img.shields.io/pypi/pyversions/django)
+![](https://img.shields.io/pypi/djversions/djangorestframework?style=flat-square)
+![](https://img.shields.io/pypi/djversions/django-cors-headers)
  
  API RESTful para agenda de contatos.
 
