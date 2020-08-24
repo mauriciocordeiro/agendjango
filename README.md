@@ -19,5 +19,5 @@
 
  ## Modelo
 
- ![](/doc/ER.jpg)
+ ![](/docs/ER.jpg)
 
